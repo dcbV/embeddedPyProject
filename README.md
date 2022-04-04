@@ -11,11 +11,11 @@ Python v3.10
 
 ###Folder structure:
 *     embeddedPyProject-|
-                        |- codeEmbProj -|
+                        |- codeEmbProj -|                             -> Software Development code
                                         |- embedded.py  	        -> code file
                                         |- main.py			-> main project file
 
-                        |- testEmbProj -|
+                        |- testEmbProj -|                             -> Software Test code
                                         |- reports  -|		-> folder with test results
                                         |- testData -|		-> folder with one json file for each development function
                                         |- __init__			-> __init__ file for test
