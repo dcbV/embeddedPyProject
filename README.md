@@ -25,7 +25,7 @@ Python v3.10
 
 ###Execute unittest file
 1. cd testEmbProj
-2. python mainUnitTest.py
+2. python mainUnitTests.py
 
 ###Test Results
 After the execution a json file with a resume of each test case execution is generated and
