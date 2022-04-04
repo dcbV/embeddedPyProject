@@ -60,7 +60,7 @@ class Test_compare_to_pattern_list(unittest.TestCase):
             test['out']['out1'] = None
         try:
             self.assertEqual(test['out']['out1'], output)
-        except:
+        except AssertionError:
             self.results.update(utils.savelastresults(self.test_data, test_name, output, "fail"))
             raise
         else:
@@ -82,7 +82,7 @@ class Test_compare_to_pattern_list(unittest.TestCase):
             test['out']['out1'] = None
         try:
             self.assertEqual(test['out']['out1'], output)
-        except:
+        except AssertionError:
             self.results.update(utils.savelastresults(self.test_data, test_name, output, "fail"))
             raise
         else:
@@ -104,7 +104,7 @@ class Test_compare_to_pattern_list(unittest.TestCase):
             test['out']['out1'] = None
         try:
             self.assertEqual(test['out']['out1'], output)
-        except:
+        except AssertionError:
             self.results.update(utils.savelastresults(self.test_data, test_name, output, "fail"))
             raise
         else:
@@ -126,7 +126,7 @@ class Test_compare_to_pattern_list(unittest.TestCase):
             test['out']['out1'] = None
         try:
             self.assertEqual(test['out']['out1'], output)
-        except:
+        except AssertionError:
             self.results.update(utils.savelastresults(self.test_data, test_name, output, "fail"))
             raise
         else:
@@ -192,7 +192,7 @@ class Test_search_file_meet(unittest.TestCase):
             test['out']['out1'] = None
         try:
             self.assertEqual(test['out']['out1'], output)
-        except:
+        except AssertionError:
             self.results.update(utils.savelastresults(self.test_data, test_name, output, "fail"))
             raise
         else:
@@ -219,7 +219,7 @@ class Test_search_file_meet(unittest.TestCase):
         try:
             self.assertEqual(test['out']['out1'], output)
 
-        except:
+        except AssertionError:
             self.results.update(utils.savelastresults(self.test_data, test_name, output, "fail"))
             raise
         else:
@@ -246,11 +246,12 @@ class Test_search_file_meet(unittest.TestCase):
             test['out']['out1'] = None
         try:
             self.assertEqual(test['out']['out1'], output)
-        except:
+        except AssertionError:
             self.results.update(utils.savelastresults(self.test_data, test_name, output, "fail"))
             raise
         else:
             self.results.update(utils.savelastresults(self.test_data, test_name, output, "pass"))
+
 
 class Test_coin_permutations(unittest.TestCase):
     test_set = "Test_coin_permutations"
@@ -297,7 +298,7 @@ class Test_coin_permutations(unittest.TestCase):
             test['out']['out1'] = None
         try:
             self.assertEqual(test['out']['out1'], permutations)
-        except:
+        except AssertionError:
             self.results.update(utils.savelastresults(self.test_data, test_name, permutations, "fail"))
             raise
         else:
@@ -319,7 +320,7 @@ class Test_coin_permutations(unittest.TestCase):
             test['out']['out1'] = None
         try:
             self.assertEqual(test['out']['out1'], permutations)
-        except:
+        except AssertionError:
             self.results.update(utils.savelastresults(self.test_data, test_name, permutations, "fail"))
             raise
         else:
@@ -341,7 +342,7 @@ class Test_coin_permutations(unittest.TestCase):
             test['out']['out1'] = None
         try:
             self.assertEqual(test['out']['out1'], permutations)
-        except:
+        except AssertionError:
             self.results.update(utils.savelastresults(self.test_data, test_name, permutations, "fail"))
             raise
         else:
