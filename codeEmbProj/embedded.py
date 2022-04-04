@@ -56,7 +56,6 @@ def search_file_meet(path: str, owner: int = 0, size: int = 14680, exec: bool = 
                 filepath = path + '/' + file
                 fileobj = os.stat(filepath)
                 if fileobj.st_uid == owner and fileobj.st_size <= size:
-                    print(size)
                     try:
                         # If it has to be executable and it is, it returns the file, otherwise, it continues
                         if win32file.GetBinaryType(filepath) == exec:
