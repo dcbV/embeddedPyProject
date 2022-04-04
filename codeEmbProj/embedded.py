@@ -5,6 +5,8 @@ Description: code related to the embedded element
 
 import os
 from os.path import isfile, join
+
+import pywintypes
 import win32file
 import copy
 
@@ -60,7 +62,7 @@ def search_file_meet(path: str, owner: int = 0, size: int = 14680, exec: bool = 
                         # If it has to be executable and it is, it returns the file, otherwise, it continues
                         if win32file.GetBinaryType(filepath) == exec:
                             return file
-                    except:
+                    except pywintypes.error:
                         continue
 
 
