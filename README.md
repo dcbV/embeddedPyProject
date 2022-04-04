@@ -12,6 +12,7 @@ Python v3.10
 ###Folder structure:
 *     embeddedPyProject-|
                         |- codeEmbProj -|                             -> Software Development code
+                                        |- __init__			-> __init__ file for code
                                         |- embedded.py  	        -> code file
                                         |- main.py			-> main project file
 
