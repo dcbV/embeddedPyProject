@@ -82,7 +82,7 @@ def savelastresults(testdata: dict, test: str, output, result: str) -> dict:
     return results
 
 
-def test2XmlReport(report_folder: str, testname: str, results: dict) -> None:
+def test2XmlReport(report_folder: str, code_file: str, testname: str, results: dict) -> None:
     """
     Created json file with the data after executing all the test cases related to a function
 
@@ -98,6 +98,6 @@ def test2XmlReport(report_folder: str, testname: str, results: dict) -> None:
 
     if not os.path.isdir(report_folder):
         os.mkdir(report_folder)
-    file = open(report_folder + testname + '_' + date + '.json', "a")
+    file = open(report_folder + code_file + testname + '_' + date + '.json', "a")
     json.dump(results, file, indent=4)
     file.close()

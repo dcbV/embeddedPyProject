@@ -18,6 +18,7 @@ from codeEmbProj.embedded import *
 class Test_compare_to_pattern_list(unittest.TestCase):
     test_set = "Test_compare_to_pattern_list"
     data = utils.getFromJson('./testData/' + test_set + '.json')
+    code_file = 'TestResults___main__.'
     results = {}
 
     @classmethod
@@ -41,7 +42,7 @@ class Test_compare_to_pattern_list(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls) -> None:
-        utils.test2XmlReport(configuration.report_folder, cls.test_set, cls.results)
+        utils.test2XmlReport(configuration.report_folder, cls.code_file, cls.test_set, cls.results)
 
     def test_when_only_one_value_repeated(self) -> None:
         """
@@ -136,6 +137,7 @@ class Test_search_file_meet(unittest.TestCase):
     test_set = "Test_search_file_meet"
     data = utils.getFromJson('./testData/' + test_set + '.json')
     test_samples = './testData/Test_search_file_meet_samples/'
+    code_file = 'TestResults___main__.'
     results = {}
 
     @classmethod
@@ -159,7 +161,7 @@ class Test_search_file_meet(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls) -> None:
-        utils.test2XmlReport(configuration.report_folder, cls.test_set, cls.results)
+        utils.test2XmlReport(configuration.report_folder, cls.code_file, cls.test_set, cls.results)
 
     def setUp(self) -> None:
         if not os.path.exists(self.test_samples):
@@ -253,6 +255,7 @@ class Test_search_file_meet(unittest.TestCase):
 class Test_coin_permutations(unittest.TestCase):
     test_set = "Test_coin_permutations"
     data = utils.getFromJson('./testData/' + test_set + '.json')
+    code_file = 'TestResults___main__.'
     results = {}
 
     @classmethod
@@ -276,7 +279,7 @@ class Test_coin_permutations(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls) -> None:
-        utils.test2XmlReport(configuration.report_folder, cls.test_set, cls.results)
+        utils.test2XmlReport(configuration.report_folder, cls.code_file, cls.test_set, cls.results)
 
     def test_sequence_empty(self) -> None:
         """
