@@ -132,4 +132,5 @@ dmypy.json
 *.idea
 *.html
 testEmbProj/report/*
-*.json
+reports/
+*.bak
