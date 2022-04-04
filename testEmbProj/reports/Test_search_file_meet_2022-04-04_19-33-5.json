@@ -1,0 +1,26 @@
+{
+    "test_with_not_files": {
+        "test_data": {
+            "in": {
+                "in1": "../testEmbProj/testData/Test_search_file_meet_samples/"
+            },
+            "out": {
+                "out1": null
+            }
+        },
+        "out received": null,
+        "result": "pass"
+    },
+    "test_with_on_file_executable_meet": {
+        "test_data": {
+            "in": {
+                "in1": "../testEmbProj/testData/Test_search_file_meet_samples/"
+            },
+            "out": {
+                "out1": "file2.exe"
+            }
+        },
+        "out received": "file2.exe",
+        "result": "pass"
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "Test_coin_permutations": {
+    "test_sequence_empty": {
+      "in": {
+        "in1": []
+      },
+      "out": {
+        "out1": "None"
+      }
+    },
+    "test_sequence_with_permutations": {
+      "in": {
+        "in1": [1,0,0,1,1]
+      },
+      "out": {
+        "out1": 2
+      }
+    },
+    "test_sequence_with_all_ones": {
+      "in": {
+        "in1": [1,1,1,1,1,1]
+      },
+      "out": {
+        "out1": 3
+      }
+    }
+  }
+}

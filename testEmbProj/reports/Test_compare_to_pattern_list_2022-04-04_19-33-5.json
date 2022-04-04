@@ -1,0 +1,92 @@
+{
+    "test_when_more_than_one_value_repeated": {
+        "test_data": {
+            "in": {
+                "in1": [
+                    2,
+                    4,
+                    6,
+                    8,
+                    10
+                ],
+                "in2": [
+                    4,
+                    8,
+                    12,
+                    16
+                ]
+            },
+            "out": {
+                "out1": 4
+            }
+        },
+        "out received": 4,
+        "result": "pass"
+    },
+    "test_when_only_one_value_repeated": {
+        "test_data": {
+            "in": {
+                "in1": [
+                    2,
+                    4,
+                    6,
+                    8,
+                    10
+                ],
+                "in2": [
+                    3,
+                    6,
+                    9,
+                    12
+                ]
+            },
+            "out": {
+                "out1": 6
+            }
+        },
+        "out received": 6,
+        "result": "pass"
+    },
+    "test_without_pattern": {
+        "test_data": {
+            "in": {
+                "in1": [
+                    2,
+                    4,
+                    6,
+                    8,
+                    10
+                ],
+                "in2": []
+            },
+            "out": {
+                "out1": null
+            }
+        },
+        "out received": null,
+        "result": "pass"
+    },
+    "test_without_repeated_value": {
+        "test_data": {
+            "in": {
+                "in1": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "in2": [
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "out": {
+                "out1": null
+            }
+        },
+        "out received": null,
+        "result": "pass"
+    }
+}
