@@ -180,10 +180,12 @@ class Test_search_file_meet(unittest.TestCase):
 
         test_name = 'test_with_not_files'
 
-        utils.createFiles(self.test_samples, None)
+        newfiles = {}
+        utils.createFiles(self.test_samples, newfiles)
 
         test = self.test_data[test_name]
         output = search_file_meet(test['in']['in1'])
+        utils.deleteFolder(self.test_samples, newfiles)
         if test['out']['out1'] == "None":
             test['out']['out1'] = None
         try:
@@ -194,9 +196,7 @@ class Test_search_file_meet(unittest.TestCase):
         else:
             self.results.update(utils.savelastresults(self.test_data, test_name, output, "pass"))
 
-        utils.deleteFolder(self.test_samples, None)
-
-    def test_with_on_file_executable_meet(self) -> None:
+    def test_with_one_file_executable_meet(self) -> None:
         """
         This method test search_file_meet function with one file that meets the conditions
 
@@ -204,14 +204,42 @@ class Test_search_file_meet(unittest.TestCase):
         :return: None
         """
 
-        test_name = 'test_with_on_file_executable_meet'
+        test_name = 'test_with_one_file_executable_meet'
 
-        newfiles = {"file1.txt": 'dummy', "file2.exe": 'dummy'}
-
+        newfiles = {"file1.txt": configuration.dummy_text, "file2.exe": configuration.dummy_text}
         utils.createFiles(self.test_samples, newfiles)
 
         test = self.test_data[test_name]
         output = search_file_meet(test['in']['in1'])
+        utils.deleteFolder(self.test_samples, newfiles)
+        if test['out']['out1'] == "None":
+            test['out']['out1'] = None
+        try:
+            self.assertEqual(test['out']['out1'], output)
+
+        except:
+            self.results.update(utils.savelastresults(self.test_data, test_name, output, "fail"))
+            raise
+        else:
+            self.results.update(utils.savelastresults(self.test_data, test_name, output, "pass"))
+
+    def test_with_more_than_one_file_executable_meet(self) -> None:
+        """
+        This method test search_file_meet function with one file that meets the conditions
+
+        :param: None
+        :return: None
+        """
+
+        test_name = 'test_with_more_than_one_file_executable_meet'
+
+        newfiles = {"file1.txt": configuration.dummy_text, "file2.txt": ' ', "file3.exe": configuration.dummy_text,
+                    "file4.txt": 'dummy', "file5.exe": configuration.dummy_text}
+        utils.createFiles(self.test_samples, newfiles)
+
+        test = self.test_data[test_name]
+        output = search_file_meet(test['in']['in1'])
+        utils.deleteFolder(self.test_samples, newfiles)
         if test['out']['out1'] == "None":
             test['out']['out1'] = None
         try:
@@ -221,9 +249,6 @@ class Test_search_file_meet(unittest.TestCase):
             raise
         else:
             self.results.update(utils.savelastresults(self.test_data, test_name, output, "pass"))
-
-        utils.deleteFolder(self.test_samples, newfiles)
-
 
 class Test_coin_permutations(unittest.TestCase):
     test_set = "Test_coin_permutations"
@@ -318,6 +343,7 @@ class Test_coin_permutations(unittest.TestCase):
             raise
         else:
             self.results.update(utils.savelastresults(self.test_data, test_name, permutations, "pass"))
+
 
 if __name__ == "__main__":
     """
