@@ -6,7 +6,8 @@ Python v3.10
 
 ###Packages:
 - unittest
-- xmlrunner
+- HtmlTestRunner: pip install html-testRunner -U
+- win32file: pip install pywin32
 
 ###Folder structure:
 *     embeddedPyProject-|
