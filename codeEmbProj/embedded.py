@@ -8,10 +8,9 @@ from os.path import isfile, join
 
 import pywintypes
 import win32file
-import copy
 
 
-def compare_to_pattern_list(sample: list, pattern: list = None) -> int or None:
+def compare_to_pattern_list(sample: list, pattern: list = []) -> int or None:
     """
     Returns the first repeating number of the sample vector in the pattern vector or, in other case, return None. If any
     list is empty, return None.
@@ -21,14 +20,14 @@ def compare_to_pattern_list(sample: list, pattern: list = None) -> int or None:
     :return: first value repeated or None
     """
 
-    if type(sample) is not list or type(pattern) is not list:
-        return None
+    # Input protection (type)
+    assert isinstance(sample, list)
+    assert isinstance(pattern, list)
 
     # Iterates in the sample vector until it finds a value in pattern
-    else:
-        for value in sample:
-            if pattern.__contains__(value):
-                return value
+    for value in sample:
+        if pattern.__contains__(value):
+            return value
 
 
 def search_file_meet(path: str, owner: int = 0, size: int = 14680, exec: bool = True) -> str or None:
@@ -76,10 +75,17 @@ def coin_permutations(sequence: list) -> list and int:
     pair = 0
     odd = 0
 
-    if sequence is None or sequence == []:
+    # Input protection (type and not empty list)
+    if type(sequence) is not list or sequence == []:
         return None, None
 
+    # Input protection (value not 0 or 1)
+    for value in sequence:
+        if value != 0 and value != 1:
+            return None, None
+
     for idx in range(len(sequence)):
+
         # Sets value to zero or one depending on position and fixed first position value
         modpair = idx % 2  # First position of the sequence to be compared to 0
         mododd = (idx + 1) % 2  # First position of the sequence to be compared to 1
