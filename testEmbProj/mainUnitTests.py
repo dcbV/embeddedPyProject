@@ -99,7 +99,7 @@ class Test_compare_to_pattern_list(unittest.TestCase):
         test_name = 'test_without_pattern'
 
         test = self.test_data[test_name]
-        output = compare_to_pattern_list(test['in']['in1'], test['in']['in2'])
+        output = compare_to_pattern_list(test['in']['in1'])
         if test['out']['out1'] == "None":
             test['out']['out1'] = None
         try:
