@@ -66,7 +66,7 @@ def search_file_meet(path: str, owner: int = 0, size: int = 14680, exec: bool = 
                         continue
 
 
-def coin_permutations(sequence: list = None) -> list and int:
+def coin_permutations(sequence: list) -> list and int:
     """
     Returns quantity of permutations so that the sequence ends interspersed
     :param sequence: input sequence
