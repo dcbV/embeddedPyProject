@@ -348,6 +348,32 @@ class Test_coin_permutations(unittest.TestCase):
         else:
             self.results.update(utils.savelastresults(self.test_data, test_name, permutations, "pass"))
 
+    def test_sequence_not_zero_or_one(self) -> None:
+        """
+        This method test coin_permutations function with a sequence where all the values are ones
+
+        :param: None
+        :return: None
+        """
+
+        test_name = 'test_sequence_not_zero_or_one'
+
+        test = self.test_data[test_name]
+        #_, permutations = coin_permutations()
+        if test['out']['out1'] == "None":
+            test['out']['out1'] = None
+        try:
+            with self.assertRaises(AssertionError) as cm:
+                coin_permutations(test['in']['in1'])
+
+            self.assertEqual(AssertionError, AssertionError)
+
+        except AssertionError:
+            self.results.update(utils.savelastresults(self.test_data, test_name, "No AssertionError", "fail"))
+            raise
+        else:
+            self.results.update(utils.savelastresults(self.test_data, test_name, str(Exception), "pass"))
+
 
 if __name__ == "__main__":
     """
