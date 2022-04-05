@@ -1,15 +1,15 @@
 # embeddedProject
 
-Project belonging to the embedded project document
+###About
+Code from the embedded project document v1.0 05-04-2022
 
-Python v3.10
-
-###Packages:
+###Requirements
+- Python v3.10
 - unittest
-- HtmlTestRunner: pip install html-testRunner -U
-- win32file: pip install pywin32
+- html-testRunner
+- pywin32
 
-###Folder structure:
+###Folder Structure:
 *     embeddedPyProject-|
                         |- codeEmbProj -|                             -> Software Development code
                                         |- __init__			-> __init__ file for code
@@ -24,10 +24,10 @@ Python v3.10
                                         |- mainUnitTest.py	        -> main tests file with test cases
                                         |- utils.py			-> utils for test case code				
 
-###Execute unittest file
+###Run Unit Tests Script
 1. cd testEmbProj
 2. python mainUnitTests.py
 
 ###Test Results
 After the execution a json file with a resume of each test case execution is generated and
-an associated html file for each development function
+an associated html file for each development function (./testEmbProj/reports folder)
