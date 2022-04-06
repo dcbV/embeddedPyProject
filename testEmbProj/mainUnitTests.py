@@ -208,7 +208,7 @@ class Test_search_file_meet(unittest.TestCase):
 
         test_name = 'test_with_one_file_executable_meet'
 
-        newfiles = {"file1.txt": configuration.dummy_text, "file2.exe": configuration.dummy_text}
+        newfiles = {"file1.txt": configuration.dummy_text_1, "file2.exe": configuration.dummy_code_1}
         utils.createFiles(self.test_samples, newfiles)
 
         test = self.test_data[test_name]
@@ -235,8 +235,8 @@ class Test_search_file_meet(unittest.TestCase):
 
         test_name = 'test_with_more_than_one_file_executable_meet'
 
-        newfiles = {"file1.txt": configuration.dummy_text, "file2.txt": ' ', "file3.exe": configuration.dummy_text,
-                    "file4.txt": 'dummy', "file5.exe": configuration.dummy_text}
+        newfiles = {"file1.txt": configuration.dummy_text_1, "file2.txt": ' ', "file3.exe": configuration.dummy_code_1,
+                    "file4.txt": 'dummy', "file5.exe": configuration.dummy_code_2}
         utils.createFiles(self.test_samples, newfiles)
 
         test = self.test_data[test_name]
@@ -359,7 +359,6 @@ class Test_coin_permutations(unittest.TestCase):
         test_name = 'test_sequence_not_zero_or_one'
 
         test = self.test_data[test_name]
-        #_, permutations = coin_permutations()
         if test['out']['out1'] == "None":
             test['out']['out1'] = None
         try:
