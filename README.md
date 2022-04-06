@@ -25,9 +25,10 @@ Code from the embedded project document v1.0 05-04-2022
                                         |- utils.py			-> utils for test case code				
 
 ###Run Unit Tests Script
-1. cd testEmbProj
-2. python mainUnitTests.py
+1. To be located in the folder embeddedPyProject
+2. cd testEmbProj
+3. python mainUnitTests.py
 
 ###Test Results
-After the execution a json file with a resume of each test case execution is generated and
+After the execution, a json file with a resume of each test case execution is generated and
 an associated html file for each development function (./testEmbProj/reports folder)
