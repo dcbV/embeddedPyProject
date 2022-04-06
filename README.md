@@ -4,7 +4,7 @@
 Code from the embedded project document v1.0 05-04-2022
 
 ###Requirements
-- Python v3.10
+- Python v3.10(.4)
 - unittest
 - html-testRunner
 - pywin32
