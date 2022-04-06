@@ -29,6 +29,6 @@ Code from the embedded project document v1.0 05-04-2022
 2. cd testEmbProj
 3. python mainUnitTests.py
 
-###Test Results
+### Test Results
 After the execution, a json file with a resume of each test case execution is generated and
 an associated html file for each development function (./testEmbProj/reports folder)
