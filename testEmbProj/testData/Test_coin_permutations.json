@@ -29,7 +29,7 @@
         "in1": [1,1,12,0,1,1]
       },
       "out": {
-        "out1": null
+        "out1": "<class 'Exception'>"
       }
     }
   }
