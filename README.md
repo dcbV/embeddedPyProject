@@ -9,7 +9,7 @@ Code from the embedded project document v1.0 05-04-2022
 - html-testRunner
 - pywin32
 
-###Folder Structure:
+##Folder Structure:
 *     embeddedPyProject-|
                         |- codeEmbProj -|                             -> Software Development code
                                         |- __init__			-> __init__ file for code
@@ -24,7 +24,7 @@ Code from the embedded project document v1.0 05-04-2022
                                         |- mainUnitTest.py	        -> main tests file with test cases
                                         |- utils.py			-> utils for test case code				
 
-###Run Unit Tests Script
+##Run Unit Tests Script
 1. To be located in the folder embeddedPyProject
 2. cd testEmbProj
 3. python mainUnitTests.py
