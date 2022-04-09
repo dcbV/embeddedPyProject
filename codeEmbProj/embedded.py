@@ -25,9 +25,12 @@ def compare_to_pattern_list(sample: list, pattern: list = []) -> int or None:
     assert isinstance(pattern, list), "pattern type is not list"
 
     # Iterates in the sample vector until it finds a value in pattern
-    for value in sample:
-        if pattern.__contains__(value):
-            return value
+    #for value in sample:
+    #    if pattern.__contains__(value):
+    #        return value
+
+    result = set(sample).intersection(pattern)
+    return next(iter(sorted(result)), None)
 
 
 def search_file_meet(path: str, owner: int = 0, size: int = 14680, exec: bool = True) -> str or None:
