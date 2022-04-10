@@ -24,11 +24,6 @@ def compare_to_pattern_list(sample: list, pattern: list = []) -> int or None:
     assert isinstance(sample, list), "sample type is not list"
     assert isinstance(pattern, list), "pattern type is not list"
 
-    # Iterates in the sample vector until it finds a value in pattern
-    #for value in sample:
-    #    if pattern.__contains__(value):
-    #        return value
-
     result = set(sample).intersection(pattern)
     return next(iter(sorted(result)), None)
 
